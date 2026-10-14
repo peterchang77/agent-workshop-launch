@@ -118,7 +118,7 @@ Choose your Google account.
 
 ![Google account chooser (email blurred)](../../shared/images/cloud-shell/kiro-3-choose-account.jpg)
 
-Google then explains that it will let Kiro see one piece of information about you: your email address. Approve it to continue.
+Google then explains that it will let Kiro see one piece of information about you: your email address. Click **Continue**.
 
 ![Approve access for the Kiro sign-in (email blurred)](../../shared/images/cloud-shell/kiro-3b-approve-access.jpg)
 
