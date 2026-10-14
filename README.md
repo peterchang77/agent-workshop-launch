@@ -3,7 +3,7 @@
 Tiny launcher for hands-on workshops built on
 [agent-ai-skills](https://github.com/peterchang77/agent-ai-skills). It opens a
 Google Cloud Shell session, prints instructions, and installs the workshop data
-and Kiro CLI with one command (`bash go.sh`).
+and Kiro CLI with one command (`source go.sh`).
 
 [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/peterchang77/agent-workshop-launch&cloudshell_print=START.txt&cloudshell_workspace=.&show=terminal)
 
