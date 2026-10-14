@@ -49,7 +49,9 @@ You need: a **personal Google account** (such as Gmail; institutional accounts a
 
    Choose **Use with Google**, open the URL shown in any browser, choose your Google account, and click **Approve**.
 
-4. Start the agent:
+4. Add your workshop credits: scan the QR code or open <https://pulse.amazon/promotion/AL1ILFN7>, answer the short survey, and redeem your code while signed in with the same Google account you used for `kiro-cli login`.
+
+5. Start the agent:
 
    ```bash
    kiro-cli
@@ -130,7 +132,11 @@ The Kiro page shows an authorization code. Check that it matches the code in you
 
 Return to the terminal. It detects the sign-in on its own and you can continue.
 
-#### Step 4. Start the agent
+#### Step 4. Add your workshop credits
+
+Scan the QR code or open <https://pulse.amazon/promotion/AL1ILFN7>, answer the short survey, and redeem your code. Be signed in with the same Google account you used for `kiro-cli login`, so the credits are applied to your Kiro account.
+
+#### Step 5. Start the agent
 
 ```bash
 kiro-cli

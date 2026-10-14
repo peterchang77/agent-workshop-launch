@@ -15,7 +15,14 @@
            one-time code. Open the URL in any browser, enter the code,
            and finish signing in.
 
-  Step 3.  Start working (you are already in the project folder):
+  Step 3.  Add your workshop credits. Scan the QR code or open
+
+             https://pulse.amazon/promotion/AL1ILFN7
+
+           answer the short survey, and redeem your code while signed
+           in with the same Google account you used for kiro-cli login.
+
+  Step 4.  Start working (you are already in the project folder):
 
              kiro-cli
 
