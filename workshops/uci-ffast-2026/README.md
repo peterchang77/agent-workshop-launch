@@ -1,5 +1,7 @@
 # Accelerating Clinical Science with AI and Coding Agents
 
+## Workshop launch page: [bit.ly/4dFCfsR](https://bit.ly/4dFCfsR)
+
 ICTS FFAST workshop with Dr. Peter Chang
 
 | | |
