@@ -118,6 +118,10 @@ Choose your Google account.
 
 ![Google account chooser (email blurred)](../../shared/images/cloud-shell/kiro-3-choose-account.jpg)
 
+Google then explains that it will let Kiro see one piece of information about you: your email address. Approve it to continue.
+
+![Approve access for the Kiro sign-in (email blurred)](../../shared/images/cloud-shell/kiro-3b-approve-access.jpg)
+
 The Kiro page shows an authorization code. Check that it matches the code in your terminal, then click **Approve**.
 
 ![Kiro authorization page (code blurred)](../../shared/images/cloud-shell/kiro-4-authorization-code.jpg)
