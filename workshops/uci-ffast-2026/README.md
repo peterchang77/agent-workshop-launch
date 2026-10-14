@@ -31,7 +31,7 @@ You need: a **personal Google account** (such as Gmail; institutional accounts a
 
 1. Click this link and accept both dialogs (**Confirm**, then **Authorize**):
 
-   **[Launch the workshop environment](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/peterchang77/agent-workshop-launch&cloudshell_print=workshops/uci-ffast-2026/START.txt&cloudshell_workspace=workshops/uci-ffast-2026&ephemeral=true&show=terminal)**
+   **[Launch the workshop environment](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/peterchang77/agent-workshop-launch&cloudshell_print=START.txt&cloudshell_workspace=workshops/uci-ffast-2026&ephemeral=true&show=terminal)**
 
 2. In the terminal, run:
 
