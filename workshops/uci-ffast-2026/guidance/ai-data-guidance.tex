@@ -1,0 +1,145 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.75in,top=0.7in,bottom=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor,array,tabularx,booktabs,colortbl,enumitem,titlesec,fancyhdr,tcolorbox}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{uciblue}{HTML}{0064A4}
+\definecolor{ok}{HTML}{D9EAD3}
+\definecolor{cond}{HTML}{FFF2CC}
+\definecolor{no}{HTML}{F4CCCC}
+\definecolor{p1}{HTML}{E8F1F8}
+
+\titleformat{\section}{\large\bfseries\color{uciblue}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{2pt}
+\setlist{nosep,leftmargin=1.2em}
+\setlength{\parindent}{0pt}\setlength{\parskip}{2.5pt}
+\pagestyle{fancy}\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize October 14, 2026}
+\fancyfoot[R]{\footnotesize\thepage}
+\newcommand{\yes}{\cellcolor{ok}\textbf{Yes}}
+\newcommand{\no}{\cellcolor{no}\textbf{No}}
+\newcommand{\ap}[1]{\cellcolor{cond}\begin{tabular}[c]{@{}c@{}}\textbf{Yes}\\[-1pt]{\scriptsize #1}\end{tabular}}
+
+\begin{document}
+
+{\LARGE\bfseries\color{uciblue} Choosing AI tools for research data at UCI}\\[2pt]
+{\large Guidance on the use of chat and coding agents with UCI data}\\[1pt]
+{\small Dr.\ Peter Chang \quad|\quad Director, Institute for Precision Health, UCI Health Affairs}
+
+\begin{tcolorbox}[colback=cond!50,colframe=cond!40!black,boxrule=0.5pt,left=4pt,right=4pt,top=2pt,bottom=2pt]
+\small\textbf{Purpose and status.} Formal UCI policy specific to agentic AI tools is currently evolving. The recommendations below represent a conservative interpretation of existing information-security policy and research configurations approved for prior institutional use, including UCI Health ITS-managed servers and enterprise AWS. This document informs, but does not substitute for, institutional review. For research data at P2--P4, consult your IRB and the contacts on page~2 before proceeding.
+\end{tcolorbox}
+
+\section{Background}
+Cloud-hosted language models process all transmitted context. In interactive \emph{chat}, data exposure is limited to explicit user prompts. In contrast, an autonomous coding \emph{agent} operates across local files and terminal sessions, transmitting code excerpts, command outputs, and environment logs to the model. Data exposure is therefore governed by the entire working directory, not merely what the user types. Three terms are used throughout:
+\begin{itemize}
+\item \textbf{Model provider}: The service hosting and executing model inference (accessed by subscription or per-token API).
+\item \textbf{Harness}: The client-side software that reads local files, executes shell commands, and manages API calls on the user's behalf (vendor-specific or vendor-neutral).
+\item \textbf{Route}: The integrated combination of provider, harness, and account credentials (e.g., ZotGPT accessed via a vendor-neutral harness). Routes represent the auditable unit evaluated for protection-level compliance.
+\end{itemize}
+
+\section{Recommended order of decisions}
+\begin{enumerate}[label=\textbf{\arabic*.},itemsep=1.5pt]
+\item \textbf{Classify the data} using UCI protection levels. Sensitivity is determined by the highest-risk file in the working directory.
+\item \textbf{Select an approved route} validated for that tier (table below; details on page~2). Regulatory compliance is primarily governed by provider terms and account type, with the harness selected to fit.
+\item \textbf{Verify the setup} against the pre-use checklist on page~2, securing IRB approval for human-subjects research.
+\end{enumerate}
+
+\section{Approved routes by protection level}
+\renewcommand{\arraystretch}{1.3}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{1.75in}|>{\centering\arraybackslash}p{1.05in}|>{\centering\arraybackslash}p{1.05in}|>{\centering\arraybackslash}p{1.05in}|>{\centering\arraybackslash}p{1.05in}}
+\toprule
+\textbf{UCI protection level} & \textbf{Any provider} & \textbf{ZotGPT} & \textbf{Local HS server} & \textbf{Enterprise AWS} \\
+\midrule
+\textbf{P1 Public}\newline {\scriptsize Published research, public-website data, open de-identified datasets} & \cellcolor{ok}\textbf{Yes} & \cellcolor{ok}\textbf{Yes} & \cellcolor{ok}\textbf{Yes} & \cellcolor{ok}\textbf{Yes} \\ \midrule
+\textbf{P2 Internal}\newline {\scriptsize Unpublished drafts, meeting notes, UCI de-identified research or patient data} & \cellcolor{no}\textbf{No} & \ap{IRB first} & \ap{IRB first} & \ap{IRB first} \\ \midrule
+\textbf{P3 Moderate}\newline {\scriptsize Student (FERPA) and personnel records, export-controlled research} & \cellcolor{no}\textbf{No} & \ap{IRB first} & \ap{IRB first} & \ap{IRB first} \\ \midrule
+\textbf{P4 Highest}\newline {\scriptsize PHI, identifiable human-subjects data, SSNs, genetic or biometric data} & \cellcolor{no}\textbf{No} & \cellcolor{no}\textbf{No} & \ap{IRB + approved setup} & \ap{IRB + approved setup} \\
+\bottomrule
+\end{tabular}
+\normalsize
+
+\vspace{3pt}
+{\small\textbf{Guiding principles.} (a)~For research data at P2--P4, secure IRB protocol approval before deploying agentic tools.
+(b)~\emph{Data aggregation risk}: Combining lower-risk fields, unstructured clinical text, or high-dimensional attributes can re-identify de-identified records (mosaic effect); when uncertain, assign the higher tier.
+(c)~Publicly released de-identified datasets are P1; de-identified data held internally at UCI remain P2.
+(d)~Prototype workflows using synthetic or public data (P1) until formal approvals are secured.}
+
+\newpage
+\section{Routes in practice}
+Data governance is dictated primarily by the model provider's institutional terms. Client harnesses govern local execution; beyond P1, institutional options are strictly constrained.
+
+\renewcommand{\arraystretch}{1.2}\small
+\noindent\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.0in}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}p{1.05in}}
+\toprule
+\textbf{Route (max.\ level)} & \textbf{Chat} & \textbf{Agent} & \textbf{Billing} \\
+\midrule
+\textbf{Any provider} (P1) &
+Commercial chat interfaces, including personal accounts. &
+Vendor-proprietary harnesses on subscription (e.g., Claude Code, Codex CLI, Gemini CLI), or vendor-neutral harnesses with an API key. &
+Subscription or metered per-token billing. \\
+\midrule
+\textbf{ZotGPT} (P3) &
+ZotGPT Chat portal, open to faculty, staff, and students. &
+Vendor-neutral harness (e.g., Kiro CLI, OpenCode) configured to the ZotGPT API. Requires API provisioning via ServiceNow. &
+Metered per token (institutional credits available). \\
+\midrule
+\textbf{Local HS server} (P4) &
+Uncommon; self-hosted web interfaces (e.g., Open WebUI) may be deployed manually. &
+Vendor-neutral harness connected to a local model hosted on a server managed with UCI Health ITS. &
+Hardware capital and local administration. \\
+\midrule
+\textbf{Enterprise AWS} (P4) &
+Uncommon; private web frontends may be deployed within AWS enclaves. &
+Kiro with enterprise (UCI) single sign-on (multi-model support), or a vendor-neutral harness connected to Amazon Bedrock. &
+Kiro: subscription. Bedrock: per token. \\
+\bottomrule
+\end{tabularx}\normalsize
+
+\smallskip
+\textbf{Notes}
+\begin{itemize}
+\item \textbf{Account type dictates protection tier.} Kiro via personal login is strictly a P1 route; P4 applies exclusively when authenticated via UCI enterprise SSO within UCI's managed AWS environment.
+\item \textbf{Portability of vendor-neutral harnesses.} Open-source harnesses operate interchangeably across ZotGPT, Amazon Bedrock, and local models by updating endpoint URLs and keys. Above P1, the choice is between turnkey enterprise routes and configurable open-source tools.
+\item \textbf{Harness security and egress inspection.} Client harnesses must be evaluated alongside the model provider. Investigators must verify outbound endpoints, disable telemetry, and confirm local transcript paths, as harnesses serve as the primary egress route for workspace files.
+\item \textbf{Subscription vs.\ programmatic decoupling.} Commercial subscriptions are generally tied to proprietary vendor harnesses (standard for P1 workflows), whereas API-driven access decouples client execution from underlying model inference.
+\item \textbf{ZotGPT regulatory boundaries.} ZotGPT is strictly prohibited for PHI or P4 data; human-subjects research requires IRB authorization. Confirm custom endpoint support and model availability prior to deployment. Because agentic loops execute recursive queries, enforce hard spend caps.
+\end{itemize}
+
+\vspace{-1pt}
+{\small\textbf{Further reading.}
+\href{https://peterchang77.github.io/agent-ai-skills/concepts/harnesses/}{Harnesses and models},
+\href{https://peterchang77.github.io/agent-ai-skills/concepts/costs/}{Costs: subscriptions and APIs},
+\href{https://peterchang77.github.io/agent-ai-skills/concepts/privacy/}{Privacy and data handling},
+\href{https://peterchang77.github.io/agent-ai-skills/concepts/sandboxing/}{Sandboxing}.}
+
+\section{Pre-use checklist}
+\begin{enumerate}[label=$\square$,itemsep=1pt]
+\item What is the highest protection level of any file accessible within this working directory?
+\item Does this project involve human subjects, and does IRB protocol approval cover computational AI tools?
+\item Are both the model provider and the client harness approved for this data protection level?
+\item Is the session authenticated via an institutional or enterprise account rather than a personal login?
+\item Can the agent work from a data schema, dictionary, or sample rather than the complete dataset?
+\item Are session transcripts and logs stored securely and excluded from version control (.gitignore)?
+\end{enumerate}
+
+\section{Contacts and links}
+\begin{itemize}
+\item \textbf{Local HS-approved server:} UCI Health ITS, \href{https://its.health.uci.edu/}{its.health.uci.edu}. Requests are submitted through ServiceNow.
+\item \textbf{Enterprise AWS (Kiro, Bedrock):} Mike Glover, UCI AWS Cloud Architect, \href{mailto:gloverm@hs.uci.edu}{gloverm@hs.uci.edu}.
+\item \textbf{ZotGPT:} \href{https://zotgpt.uci.edu/services/api/}{API overview}, \href{https://uci.service-now.com/sp?id=kb_article_view&sysparm_article=KB0013367}{request API access} (ServiceNow),
+\href{https://portal.azureapi.zotgpt.uci.edu}{API portal}, \href{https://zotgpt.uci.edu/privacy}{privacy notice}.
+\item \textbf{UCI protection levels:} \href{https://www.security.uci.edu/program/classification/protection-levels/}{security.uci.edu/program/classification/protection-levels}.
+\item \textbf{Background reading:} \href{https://peterchang77.github.io/agent-ai-skills/}{peterchang77.github.io/agent-ai-skills}.
+\end{itemize}
+
+\vspace{-1pt}
+{\footnotesize Policies, pricing, and approvals change; consult the linked UCI pages for current terms.}
+
+\end{document}

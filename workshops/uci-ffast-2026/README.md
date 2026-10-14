@@ -18,7 +18,7 @@ Kiro CLI and AWS Bedrock to process complex datasets, automate data cleaning, an
 ## Resources
 
 - **Workshop materials:** [agent-ai-skills](https://github.com/peterchang77/agent-ai-skills) ([website](https://peterchang77.github.io/agent-ai-skills/)): the tutorial, concept pages, and background reading used in this workshop.
-- **Institutional guidance on AI use:** _Google Doc link to be added._ This covers UCI-specific policies and is separate from the technical setup below.
+- **Which AI tools for which UCI data:** [Choosing AI tools for research data at UCI (PDF)](guidance/ai-data-guidance.pdf). Guidance on matching UCI protection levels (P1-P4) to chat and agent options, with contacts. It is separate from the technical setup below.
 
 ## Set up your environment before the workshop
 
