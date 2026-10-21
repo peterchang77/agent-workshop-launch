@@ -10,7 +10,7 @@ _workshop_go() {
 
   echo "Installing workshop data and Kiro CLI (about a minute)..."
   # Subshell: pipefail applies only here, and a failure cannot close your terminal.
-  ( set -o pipefail; curl -fsSL "$base_url/install.sh" | bash -s -- --yes "$@" ) \
+  ( set -o pipefail; curl -fsSL "$base_url/install.sh" | bash -s -- --scenario clinical --yes "$@" ) \
     || { echo "Install failed. Check your connection and run 'source go.sh' again." >&2; return 1; }
 
   # The Kiro installer asks for ~/.local/bin on PATH; do it for this shell and for new tabs.

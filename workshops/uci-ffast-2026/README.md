@@ -173,18 +173,18 @@ Still stuck? Ask a helper in the room. Bring your laptop, and we can set up the 
 ### Option 2: personal device
 
 If you cannot use Cloud Shell, you can install the same materials and Kiro CLI on your own computer with the
-installer from the [workshop materials](https://peterchang77.github.io/agent-ai-skills/tutorial/setup/) (macOS, Linux, Windows via WSL, or native Windows PowerShell).
+installer from the [workshop materials](https://peterchang77.github.io/agent-ai-skills/tutorial-clinical/setup/) (macOS, Linux, Windows via WSL, or native Windows PowerShell).
 
 macOS, Linux, or Windows via WSL:
 
 ```bash
-curl -fsSL https://peterchang77.github.io/agent-ai-skills/install.sh | bash
+curl -fsSL https://peterchang77.github.io/agent-ai-skills/install.sh | bash -s -- --scenario clinical
 ```
 
 Windows PowerShell:
 
 ```powershell
-irm https://peterchang77.github.io/agent-ai-skills/install.ps1 | iex
+& ([scriptblock]::Create((irm https://peterchang77.github.io/agent-ai-skills/install.ps1))) -Scenario clinical
 ```
 
 Then run `kiro-cli login` and `kiro-cli` from `~/workshop-demo` (`$HOME\workshop-demo` on Windows). The sign-in steps are the same as in Step 3,
