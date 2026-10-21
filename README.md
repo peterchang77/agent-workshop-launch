@@ -10,6 +10,7 @@ in Google Cloud Shell. The main materials repo stays generic; everything specifi
 | Workshop | Date |
 |---|---|
 | [Accelerating Clinical Science with AI and Coding Agents (UCI ICTS FFAST)](workshops/uci-ffast-2026/) | 2026-10-14 |
+| [From Data to Evidence with Research Agents (SIIM-CAIMI)](workshops/siim-caimi-2026/) | 2026-10-27 |
 
 ## Add a workshop
 

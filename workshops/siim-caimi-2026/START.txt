@@ -1,0 +1,25 @@
+==============================================================
+  Welcome to the workshop!   (Google Cloud Shell)
+==============================================================
+
+  Step 1.  Install the workshop files and Kiro CLI
+           (takes a few minutes):
+
+             source go.sh
+
+  Step 2.  Sign in to Kiro:
+
+             kiro-cli login
+
+           Choose "Use with Google". The terminal shows a URL and a
+           one-time code. Open the URL in any browser, enter the code,
+           and finish signing in.
+
+  Step 3.  Start working (you are already in the project folder):
+
+             kiro-cli
+
+  Notes
+  - This session is temporary. Files are deleted when it ends, so
+    download anything you want to keep.
+  - Stuck? Ask a helper in the room.
