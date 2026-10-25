@@ -1,7 +1,7 @@
-# Workshop launcher: installs the workshop data and Kiro CLI in this Cloud Shell session.
+# Workshop launcher: installs the workshop data and Kiro CLI on a personal or temporary machine.
 # Run it with:   source go.sh
 # (sourcing lets it update PATH and move you into the project folder in your current shell)
-# Cloud Shell sessions for this repo are temporary, so run this once each time you launch.
+# Not needed in AWS Workshop Studio, where the files are preprovisioned.
 
 _workshop_go() {
   local base_url="${WORKSHOP_BASE_URL:-https://peterchang77.github.io/agent-ai-skills}"
@@ -22,7 +22,7 @@ _workshop_go() {
 
   echo
   echo "Ready. Next:"
-  echo "  1. kiro-cli login    (choose \"Use with Google\"; open the URL shown and enter the code)"
+  echo "  1. kiro-cli login    (choose a sign-in method, e.g. \"Use with Google\"; open the URL shown if asked)"
   echo "  2. kiro-cli"
   if [ "$sourced" = 0 ]; then
     echo

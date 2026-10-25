@@ -1,25 +1,17 @@
 ==============================================================
-  Welcome to the workshop!   (Google Cloud Shell)
+  Welcome to the workshop!
 ==============================================================
 
-  Step 1.  Install the workshop files and Kiro CLI
-           (takes a few minutes):
+  Your workshop files are in ~/workshop-imaging. In this
+  terminal, run:
 
-             source go.sh
-
-  Step 2.  Sign in to Kiro:
-
-             kiro-cli login
-
-           Choose "Use with Google". The terminal shows a URL and a
-           one-time code. Open the URL in any browser, enter the code,
-           and finish signing in.
-
-  Step 3.  Start working (you are already in the project folder):
-
+             cd ~/workshop-imaging
              kiro-cli
 
+  No Kiro sign-in is needed in the AWS Workshop Studio
+  environment.
+
   Notes
-  - This session is temporary. Files are deleted when it ends, so
-    download anything you want to keep.
+  - Your AWS account is temporary (72 hours). Files are deleted
+    afterward, so download anything you want to keep.
   - Stuck? Ask a helper in the room.
