@@ -36,7 +36,7 @@ You will be given an **event access code** at the workshop, and it is required f
 You need: any email address you can read during the session (personal or institutional), the event access code, and a normal
 Chrome, Edge, Firefox, or Safari window.
 
-1. Open [https://catalog.workshops.aws/join](https://catalog.workshops.aws/join), choose **Email one-time password (OTP)**, enter the passcode emailed to you,
+1. Open [https://catalog.us-east-1.prod.workshops.aws/join](https://catalog.us-east-1.prod.workshops.aws/join), choose **Email one-time password (OTP)**, enter the passcode emailed to you,
    then enter the **event access code**.
 2. Open **Kiro IDE (web)** from the event page, then open a terminal (**Terminal** > **New Terminal**).
 3. In the terminal, start the agent:
@@ -58,7 +58,7 @@ If something goes wrong, see [Troubleshooting](#troubleshooting). Your AWS accou
 
 #### Step 1. Sign in to AWS Workshop Studio
 
-Open [https://catalog.workshops.aws/join](https://catalog.workshops.aws/join). Choose **Email one-time password (OTP)**.
+Open [https://catalog.us-east-1.prod.workshops.aws/join](https://catalog.us-east-1.prod.workshops.aws/join). Choose **Email one-time password (OTP)**.
 
 ![Workshop Studio sign-in method](../../shared/images/aws-workshop-studio/workshop-studio-1-sign-in.png)
 
