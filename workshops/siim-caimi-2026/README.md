@@ -31,15 +31,15 @@ Your workshop environment is provided through **AWS Workshop Studio**: a tempora
 browser, so nothing needs to be installed on your laptop and no Kiro sign-in is needed. The workshop files are already in place.
 Prefer your own machine? See [Option 2: personal device](#option-2-personal-device).
 
-The join link below fills in the **event access code** (`cb98-06b195-e1`) for you. If you are ever asked for it (for example, if you used the generic join page), enter that code.
+There are two join links, and each admits up to 50 people. Use **Link 1** unless a helper tells you otherwise, or **Link 2** if Link 1 says the event is full. The link fills in the event access code for you.
 
 ### Quick start
 
 You need: any email address you can read during the session (personal or institutional), and a normal
 Chrome, Edge, Firefox, or Safari window.
 
-1. Open [https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1](https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1), choose **Email one-time password (OTP)**, and enter the passcode emailed to you.
-   The event access code is filled in automatically; if you are prompted for it, enter `cb98-06b195-e1`.
+1. Open [https://s12d.com/caimi-1](https://s12d.com/caimi-1) (or, if it is full, [https://s12d.com/caimi-2](https://s12d.com/caimi-2)), choose **Email one-time password (OTP)**, and enter the passcode emailed to you.
+   The event access code is filled in automatically; if you are prompted for it, ask a helper.
 2. Open **Kiro IDE (web)** from the event page, then open a terminal (**Terminal** > **New Terminal**).
 3. In the terminal, start the agent:
 
@@ -60,7 +60,7 @@ If something goes wrong, see [Troubleshooting](#troubleshooting). Your AWS accou
 
 #### Step 1. Sign in to AWS Workshop Studio
 
-Open [https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1](https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1). Choose **Email one-time password (OTP)**.
+Open [https://s12d.com/caimi-1](https://s12d.com/caimi-1). If it says the event is full (each link admits up to 50 people), use [https://s12d.com/caimi-2](https://s12d.com/caimi-2) instead. Choose **Email one-time password (OTP)**.
 
 ![Workshop Studio sign-in method](../../shared/images/aws-workshop-studio/workshop-studio-1-sign-in.png)
 
@@ -72,7 +72,7 @@ Open the email and enter the 9-digit passcode (it arrives within 5 minutes and e
 
 ![Enter the passcode (email blurred)](../../shared/images/aws-workshop-studio/workshop-studio-3-passcode.png)
 
-The event access code is filled in automatically by the join link. If you are prompted for it (for example, because you opened the generic join page), enter `cb98-06b195-e1` and continue.
+The event access code is filled in automatically by the join link. If you are prompted for it, ask a helper.
 
 ![Enter the event access code](../../shared/images/aws-workshop-studio/workshop-studio-4-access-code.png)
 
@@ -111,7 +111,8 @@ Try a simple request such as _"What files are in this folder?"_. If it answers, 
 |---|---|
 | I did not receive the passcode email | Check your spam folder and wait a few minutes, then click **Resend passcode**. Make sure the address was typed correctly. |
 | The passcode does not work or has expired | Codes expire after 15 minutes. Click **Back**, request a new passcode, and use the newest email. |
-| The event access code is rejected | Enter `cb98-06b195-e1` exactly, with no extra spaces. If it still fails, ask a helper. |
+| The event access code is requested or rejected | Ask a helper for the code and enter it exactly, with no extra spaces. |
+| The join link says the event is full | Each link admits up to 50 people. Try the other link (caimi-1 or caimi-2), or ask a helper. |
 | The Kiro IDE page does not load | Use a normal, non-incognito window, wait a minute, and refresh. Try another browser if it persists. |
 | `cd ~/workshop-imaging` fails | Run `ls ~` to look for the workshop folder, or ask a helper. |
 | `kiro-cli: command not found` | Run `source ~/.bashrc` or `export PATH="$HOME/.local/bin:$PATH"`, then try again. |
