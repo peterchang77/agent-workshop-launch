@@ -38,7 +38,7 @@ The join link below fills in the **event access code** (`cb98-06b195-e1`) for yo
 You need: any email address you can read during the session (personal or institutional), and a normal
 Chrome, Edge, Firefox, or Safari window.
 
-1. Open [https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1](https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1), choose **Email one-time password (OTP)**, enter the passcode emailed to you,
+1. Open [https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1](https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1), choose **Email one-time password (OTP)**, and enter the passcode emailed to you.
    The event access code is filled in automatically; if you are prompted for it, enter `cb98-06b195-e1`.
 2. Open **Kiro IDE (web)** from the event page, then open a terminal (**Terminal** > **New Terminal**).
 3. In the terminal, start the agent:
