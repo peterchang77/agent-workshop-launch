@@ -31,15 +31,15 @@ Your workshop environment is provided through **AWS Workshop Studio**: a tempora
 browser, so nothing needs to be installed on your laptop and no Kiro sign-in is needed. The workshop files are already in place.
 Prefer your own machine? See [Option 2: personal device](#option-2-personal-device).
 
-You will be given an **event access code** at the workshop, and it is required for setup, so complete these steps when you arrive.
+The join link below fills in the **event access code** (`cb98-06b195-e1`) for you. If you are ever asked for it (for example, if you used the generic join page), enter that code.
 
 ### Quick start
 
-You need: any email address you can read during the session (personal or institutional), the event access code, and a normal
+You need: any email address you can read during the session (personal or institutional), and a normal
 Chrome, Edge, Firefox, or Safari window.
 
 1. Open [https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1](https://catalog.us-east-1.prod.workshops.aws/join?access-code=cb98-06b195-e1), choose **Email one-time password (OTP)**, enter the passcode emailed to you,
-   then enter the **event access code**.
+   The event access code is filled in automatically; if you are prompted for it, enter `cb98-06b195-e1`.
 2. Open **Kiro IDE (web)** from the event page, then open a terminal (**Terminal** > **New Terminal**).
 3. In the terminal, start the agent:
 
@@ -72,7 +72,7 @@ Open the email and enter the 9-digit passcode (it arrives within 5 minutes and e
 
 ![Enter the passcode (email blurred)](../../shared/images/aws-workshop-studio/workshop-studio-3-passcode.png)
 
-Enter the **event access code** given to you at the workshop and continue.
+The event access code is filled in automatically by the join link. If you are prompted for it (for example, because you opened the generic join page), enter `cb98-06b195-e1` and continue.
 
 ![Enter the event access code](../../shared/images/aws-workshop-studio/workshop-studio-4-access-code.png)
 
@@ -103,7 +103,7 @@ Try a simple request such as _"What files are in this folder?"_. If it answers, 
 #### When you are done
 
 - Copy anything you want to keep out of the environment first (right-click a file in the Kiro IDE file explorer and choose Download). Your files are deleted when the AWS account expires.
-- The account is available for 72 hours. After that, you will need a new event access code to use it again.
+- The account is available for 72 hours. After that, you will need to ask a helper about a new event access code.
 
 ### Troubleshooting
 
@@ -111,7 +111,7 @@ Try a simple request such as _"What files are in this folder?"_. If it answers, 
 |---|---|
 | I did not receive the passcode email | Check your spam folder and wait a few minutes, then click **Resend passcode**. Make sure the address was typed correctly. |
 | The passcode does not work or has expired | Codes expire after 15 minutes. Click **Back**, request a new passcode, and use the newest email. |
-| The event access code is rejected | Enter it exactly as given, with no extra spaces. If it still fails, ask a helper. |
+| The event access code is rejected | Enter `cb98-06b195-e1` exactly, with no extra spaces. If it still fails, ask a helper. |
 | The Kiro IDE page does not load | Use a normal, non-incognito window, wait a minute, and refresh. Try another browser if it persists. |
 | `cd ~/workshop-imaging` fails | Run `ls ~` to look for the workshop folder, or ask a helper. |
 | `kiro-cli: command not found` | Run `source ~/.bashrc` or `export PATH="$HOME/.local/bin:$PATH"`, then try again. |
